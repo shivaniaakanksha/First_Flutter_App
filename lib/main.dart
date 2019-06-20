@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
-main() {
-  runApp(MyApp());
-}
+void main() => runApp(MyApp());
+
 
 class MyApp extends StatelessWidget {
   @override
@@ -12,6 +11,10 @@ class MyApp extends StatelessWidget {
       appBar: AppBar(
         title: Text('MY FIRST APP'),
       ),
+      body: Card(child: Column(children: <Widget>[
+        Image.asset('assets/food.jpg'),
+        Text('FOOD PARADISE')
+      ],),),
     ));
   }
 }
