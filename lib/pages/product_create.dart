@@ -23,7 +23,7 @@ class _ProductCreatePageState extends State<ProductCreatePage> {
       child: ListView(
         children: <Widget>[
           TextField(
-            decoration: InputDecoration(labelText: 'Product title'),
+            decoration: InputDecoration(labelText: 'Product Title'),
             onChanged: (String value) {
               setState(() {
                 titleValue = value;
@@ -48,20 +48,22 @@ class _ProductCreatePageState extends State<ProductCreatePage> {
               });
             },
           ),
-          SizedBox(height: 10.0,),
+          SizedBox(
+            height: 10.0,
+          ),
           RaisedButton(
+            child: Text('Save'),
             color: Theme.of(context).accentColor,
             textColor: Colors.white,
-            child: Text('SAVE'),
             onPressed: () {
               final Map<String, dynamic> product = {
                 'title': titleValue,
                 'description': descriptionValue,
                 'price': priceValue,
-                'image':'assets/food.jpg'
+                'image': 'assets/food.jpg'
               };
               widget.addProduct(product);
-              Navigator.pushReplacementNamed(context, '/');
+              Navigator.pushReplacementNamed(context, '/products');
             },
           )
         ],
