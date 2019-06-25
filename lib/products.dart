@@ -24,7 +24,7 @@ class Products extends StatelessWidget {
                 onPressed: () => Navigator
                         .pushNamed<bool>(
                             context, '/product/' + index.toString())
-                        .then((bool value) {
+                        .then((bool value) {  
                       if (value) {
                         deleteProduct(index);
                       }
