@@ -13,12 +13,7 @@ class Products extends StatelessWidget {
         children: <Widget>[
           Image.asset(products[index]['image']),
           Container(
-              //margin: EdgeInsets.all(10.0),
-              margin: EdgeInsets.only(top: 10.0),
-              //margin: EdgeInsets.symmetric(vertical: 10.0), //for top and bottom
-              //margin: EdgeInsets.symmetric(horizontal: 10.0), //for left and right
-              //padding: EdgeInsets.only(top: 10.0),
-              //color: Colors.red,
+              padding: EdgeInsets.only(top: 10.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -30,7 +25,7 @@ class Products extends StatelessWidget {
                         fontFamily: 'Oswald'),
                   ),
                   SizedBox(
-                    width: 10.0,
+                    width: 8.0,
                   ),
                   Container(
                     padding:
@@ -45,11 +40,13 @@ class Products extends StatelessWidget {
                   )
                 ],
               )),
-          // Padding(
-          //   padding: EdgeInsets.only(top: 10.0),
-          //   child: Text('hey! there!'),
-          // ),
-          //SizedBox(height: 10.0,),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 6.0, vertical: 2.5),
+            decoration: BoxDecoration(
+                border: Border.all(color: Colors.grey, width: 1.0),
+                borderRadius: BorderRadius.circular(4.0)),
+            child: Text('Union Square, San Francisco'),
+          ),
           ButtonBar(
             alignment: MainAxisAlignment.center,
             children: <Widget>[
