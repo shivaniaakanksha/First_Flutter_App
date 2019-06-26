@@ -19,7 +19,10 @@ class Products extends StatelessWidget {
             //margin: EdgeInsets.symmetric(horizontal: 10.0), //for left and right
             //padding: EdgeInsets.only(top: 10.0),
             //color: Colors.red,
-            child: Text(products[index]['title']),
+            child: Text(
+              products[index]['title'],
+              style: TextStyle(fontSize: 26.0,fontWeight: FontWeight.bold,fontFamily: 'Oswald'),
+            ),
           ),
           // Padding(
           //   padding: EdgeInsets.only(top: 10.0),
