@@ -16,7 +16,7 @@ class ProductsPage extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.edit),
-            title: Text('Manage Products'),
+            title: Text('Manage Products '),
             onTap: () {
               Navigator.pushReplacementNamed(context, '/admin');
             },
